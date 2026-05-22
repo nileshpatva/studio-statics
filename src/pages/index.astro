@@ -1,0 +1,84 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Queendom — A Royal Puzzle Game">
+  <div class="hero">
+    <img src={`${import.meta.env.BASE_URL}queendom-banner.jpg`} alt="Queendom" class="banner" />
+    <p class="tagline">Place queens. Conquer regions. Rule the board.</p>
+    <p class="description">
+      A grid-based puzzle game where you place queens in colored regions following
+      three simple rules: one queen per region, no shared rows or columns, and no
+      diagonal adjacency. Simple to learn, challenging to master.
+    </p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <h3>🎯 Two Game Modes</h3>
+      <p><strong>Classic</strong> — All regions visible. Plan your strategy.</p>
+      <p><strong>Chronicle</strong> — Unfold the story, region by region.</p>
+    </div>
+    <div class="feature">
+      <h3>📈 500 Levels Per Difficulty</h3>
+      <p>Easy, Medium, and Hard — 3000 handcrafted puzzles across both modes.</p>
+    </div>
+    <div class="feature">
+      <h3>∞ Endless Mode</h3>
+      <p>Random puzzles generated on the fly. Never run out of challenges.</p>
+    </div>
+  </div>
+
+  <div class="links">
+    <h2>Legal</h2>
+    <ul>
+      <li><a href={`${import.meta.env.BASE_URL}queendom/privacy/`}>Privacy Policy</a></li>
+      <li><a href={`${import.meta.env.BASE_URL}queendom/terms/`}>Terms of Service</a></li>
+    </ul>
+  </div>
+
+  <style>
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .banner {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .description {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .features {
+      display: grid;
+      gap: 24px;
+      margin: 48px 0;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .feature h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .feature p {
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .links h2 {
+      border: none;
+    }
+  </style>
+</Base>

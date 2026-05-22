@@ -1,0 +1,160 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Queendom - A Royal Puzzle Game" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <style>
+      :root {
+        --bg: #1a1a2e;
+        --surface: #16213e;
+        --text: #eeeeee;
+        --text-muted: #aaaaaa;
+        --accent: #4a9eff;
+        --border: #2d2d44;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 24px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 48px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .header-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        margin-bottom: 8px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 4px;
+        margin-top: 8px;
+      }
+
+      header p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      header a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 8px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 16px;
+        padding-left: 24px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+      }
+
+      th,
+      td {
+        padding: 10px 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+      }
+
+      th {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      footer {
+        margin-top: 64px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href={`${import.meta.env.BASE_URL}/`}>
+          <img src={`${import.meta.env.BASE_URL}/queendom-app-icon.png`} alt="Queendom" class="header-icon" />
+        </a>
+        <h1>Queendom</h1>
+        <p>
+          <a href={`${import.meta.env.BASE_URL}/`}>Home</a> ·
+          <a href={`${import.meta.env.BASE_URL}queendom/privacy/`}>Privacy</a> ·
+          <a href={`${import.meta.env.BASE_URL}queendom/terms/`}>Terms</a>
+        </p>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer>
+        <p>&copy; {new Date().getFullYear()} Nilesh Patva. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
