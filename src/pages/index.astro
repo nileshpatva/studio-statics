@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 
 <Base title="Queendom — A Royal Puzzle Game">
   <div class="hero">
-    <img src="/queendom-banner.jpg" alt="Queendom" class="banner" />
+    <img src="/brand/Queendom-Feature-Graphic.png" alt="Queendom" class="banner" />
     <p class="tagline">Place queens. Conquer regions. Rule the board.</p>
     <p class="description">
       A grid-based puzzle game where you place queens in colored regions following
@@ -13,18 +13,28 @@ import Base from "../layouts/Base.astro";
     </p>
   </div>
 
+  <div class="screenshots">
+    <h2>Screenshots</h2>
+    <div class="screenshot-grid">
+      <img src="/android-play-store/1.png" alt="Queendom gameplay" />
+      <img src="/android-play-store/2.png" alt="Queendom levels" />
+      <img src="/android-play-store/3.png" alt="Queendom puzzle" />
+      <img src="/android-play-store/4.png" alt="Queendom stats" />
+    </div>
+  </div>
+
   <div class="features">
     <div class="feature">
-      <h3>🎯 Two Game Modes</h3>
+      <h3>Two Game Modes</h3>
       <p><strong>Classic</strong> — All regions visible. Plan your strategy.</p>
       <p><strong>Chronicle</strong> — Unfold the story, region by region.</p>
     </div>
     <div class="feature">
-      <h3>📈 500 Levels Per Difficulty</h3>
+      <h3>500 Levels Per Difficulty</h3>
       <p>Easy, Medium, and Hard — 3000 handcrafted puzzles across both modes.</p>
     </div>
     <div class="feature">
-      <h3>∞ Endless Mode</h3>
+      <h3>Endless Mode</h3>
       <p>Random puzzles generated on the fly. Never run out of challenges.</p>
     </div>
   </div>
@@ -57,6 +67,22 @@ import Base from "../layouts/Base.astro";
       color: var(--text-muted);
       max-width: 600px;
       margin: 0 auto;
+    }
+    .screenshots h2 {
+      border: none;
+      text-align: center;
+    }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+      margin-bottom: 48px;
+    }
+    .screenshot-grid img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
     }
     .features {
       display: grid;
