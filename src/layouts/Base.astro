@@ -5,7 +5,7 @@ interface Props {
   image?: string;
 }
 
-const { title, description = "Queendom - A Royal Puzzle Game", image = "/queendom-banner.jpg" } = Astro.props;
+const { title, description = "Queendom - A Royal Puzzle Game", image = "/brand/Queendom-Feature-Graphic.png" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://cambay.studio");
 const imageURL = new URL(image, Astro.site || "https://cambay.studio");
 ---
