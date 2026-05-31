@@ -1,0 +1,518 @@
+---
+import Base from "../layouts/Base.astro";
+
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.queendom.app";
+const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773436806";
+---
+
+<Base title="Download Queendom - A Royal Puzzle Game" description="Get Queendom on the iOS App Store and Google Play Store. Watch gameplay showcase, view screenshots, and join the closed beta.">
+  <div class="download-page">
+    <!-- App Header Section -->
+    <div class="app-header">
+      <img src="/brand/Queendom_Icon_Filled.png" alt="Queendom Icon" class="app-icon-large animate-float" />
+      <h1 class="app-title">Queendom</h1>
+      <p class="app-subtitle">A Royal Queen Placement Puzzle Game</p>
+    </div>
+
+    <!-- Download Buttons & Closed Beta Notice -->
+    <div class="download-cta-container">
+      <div class="download-buttons">
+        <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
+          <img src="/store-badge/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="badge-img" />
+        </a>
+
+        <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
+          <img src="/store-badge/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" class="badge-img" />
+        </a>
+      </div>
+
+      <div class="android-beta-box">
+        <span class="beta-badge">Closed Beta</span>
+        <p class="beta-notice">
+          The Android version is currently in closed testing (whitelisted emails only). If you would like to join the beta, please <a href="/contact/">contact us</a> to request an invitation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Video Showcase Section -->
+    <div class="video-showcase-section">
+      <h2>Watch Gameplay</h2>
+      <div class="phone-mockup-wrapper">
+        <div class="phone-mockup">
+          <div class="phone-speaker"></div>
+          <div class="screen">
+            <video src="/videos/short/Queendom-Play.mp4" autoplay loop muted playsinline preload="auto" class="showcase-video"></video>
+          </div>
+          <div class="phone-home-indicator"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screenshots Tabbed Section -->
+    <div class="screenshots-section">
+      <h2>Screenshots</h2>
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="iphone">iPhone</button>
+        <button class="tab-btn" data-tab="ipad">iPad</button>
+        <button class="tab-btn" data-tab="android">Android</button>
+      </div>
+
+      <div class="tab-content active" id="iphone">
+        <div class="screenshot-grid portrait-grid">
+          <div class="screenshot-item"><img src="/apple-app-store/iPhone/1.png" alt="iPhone Screen 1" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/apple-app-store/iPhone/2.png" alt="iPhone Screen 2" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/apple-app-store/iPhone/3.png" alt="iPhone Screen 3" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/apple-app-store/iPhone/4.png" alt="iPhone Screen 4" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ipad">
+        <div class="screenshot-grid landscape-grid">
+          <div class="screenshot-item"><img src="/apple-app-store/iPad/Classic Mode.png" alt="iPad Classic Mode" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/apple-app-store/iPad/Chronicle Mode.png" alt="iPad Chronicle Mode" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/apple-app-store/iPad/Endless Mode.png" alt="iPad Endless Mode" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/apple-app-store/iPad/Game Stats.png" alt="iPad Game Stats" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="android">
+        <div class="screenshot-grid portrait-grid">
+          <div class="screenshot-item"><img src="/android-play-store/1.png" alt="Android Screen 1" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/android-play-store/2.png" alt="Android Screen 2" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/android-play-store/3.png" alt="Android Screen 3" loading="lazy" /></div>
+          <div class="screenshot-item"><img src="/android-play-store/4.png" alt="Android Screen 4" loading="lazy" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Counters Section -->
+    <div class="counters-section-wrapper">
+      <h2>Game Statistics</h2>
+      <div class="counters-section">
+        <div class="counter-card">
+          <div class="counter-number" data-target="3000">0</div>
+          <div class="counter-label">Handcrafted Puzzles</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-number" data-target="2">0</div>
+          <div class="counter-label">Game Modes</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-number" data-target="3">0</div>
+          <div class="counter-label">Difficulty Levels</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Main Layout */
+    .download-page {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      padding-bottom: 40px;
+    }
+
+    /* App Header */
+    .app-header {
+      text-align: center;
+      margin-top: 16px;
+    }
+    .app-icon-large {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border);
+      margin-bottom: 20px;
+    }
+    .app-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 0%, #a5c7f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .app-subtitle {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      margin-top: 6px;
+    }
+
+    /* Floating Micro-animation */
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    /* Download Buttons */
+    .download-cta-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .download-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+    }
+    .badge-link {
+      display: inline-flex;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 7px;
+      overflow: hidden;
+      background: #000000;
+    }
+    .badge-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(74, 158, 255, 0.2);
+    }
+    .badge-link:active {
+      transform: translateY(0);
+    }
+    .badge-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      border-radius: 7px;
+    }
+
+    /* Android Closed Beta notice box */
+    .android-beta-box {
+      max-width: 500px;
+      background: rgba(22, 33, 62, 0.5);
+      border: 1px solid rgba(74, 158, 255, 0.15);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .beta-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      background: rgba(74, 158, 255, 0.15);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(74, 158, 255, 0.3);
+    }
+    .beta-notice {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .beta-notice a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* Watch Gameplay & Phone Frame */
+    .video-showcase-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .video-showcase-section h2 {
+      border: none;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .phone-mockup-wrapper {
+      position: relative;
+      perspective: 1000px;
+      margin-top: 10px;
+    }
+    .phone-mockup {
+      width: 250px;
+      height: 500px;
+      background: #0f111a;
+      border: 10px solid #2d2d44;
+      border-radius: 40px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.5s ease;
+    }
+    .phone-mockup:hover {
+      transform: rotateY(5deg) rotateX(2deg) translateY(-4px);
+    }
+    .phone-speaker {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 6px;
+      background: #2d2d44;
+      border-radius: 3px;
+      z-index: 10;
+    }
+    .screen {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f3f5f8;
+      position: relative;
+      padding: 28px 0 20px 0;
+    }
+    .showcase-video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .phone-home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      z-index: 10;
+    }
+
+    /* Screenshots Section */
+    .screenshots-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .screenshots-section h2 {
+      border: none;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .tab-buttons {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 4px;
+      gap: 4px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 8px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 26px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .tab-btn:hover {
+      color: var(--text);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
+    }
+    .tab-content {
+      display: none;
+      width: 100%;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Screenshot grids */
+    .screenshot-grid {
+      display: grid;
+      gap: 16px;
+      width: 100%;
+    }
+    .portrait-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .landscape-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+      .portrait-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .landscape-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .screenshot-item {
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+    .screenshot-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .screenshot-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    .screenshot-item:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Game Stats / Counters */
+    .counters-section-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .counters-section-wrapper h2 {
+      border: none;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .counters-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      .counters-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+    .counter-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      transition: border-color 0.3s ease;
+    }
+    .counter-card:hover {
+      border-color: rgba(74, 158, 255, 0.4);
+    }
+    .counter-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 4px;
+      text-shadow: 0 0 10px rgba(74, 158, 255, 0.2);
+    }
+    .counter-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  </style>
+
+  <script>
+    // Tab switching functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+        
+        // Update active class on buttons
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update active class on contents
+        tabContents.forEach(content => {
+          if (content.id === tabId) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
+      });
+    });
+
+    // Dynamic Counter Count-Up Script
+    const animateCounters = () => {
+      const counters = document.querySelectorAll('.counter-number');
+      const duration = 1500; // 1.5 seconds animation
+
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target') || '0', 10);
+        const start = 0;
+        let startTime: number | null = null;
+
+        const updateCount = (currentTime: number) => {
+          if (!startTime) startTime = currentTime;
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          
+          // Easing Out Quad function
+          const easeProgress = progress * (2 - progress);
+          const currentValue = Math.floor(easeProgress * (target - start) + start);
+          
+          // Format with + suffix for 3000
+          counter.textContent = currentValue.toLocaleString() + (target >= 1000 ? '+' : '');
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.textContent = target.toLocaleString() + (target >= 1000 ? '+' : '');
+          }
+        };
+
+        requestAnimationFrame(updateCount);
+      });
+    };
+
+    // IntersectionObserver to trigger animation when scrolled into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    const countersSection = document.querySelector('.counters-section');
+    if (countersSection) {
+      observer.observe(countersSection);
+    }
+  </script>
+</Base>
