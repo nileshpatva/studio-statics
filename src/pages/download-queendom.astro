@@ -1,15 +1,24 @@
 ---
 import Base from "../layouts/Base.astro";
 
-const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.queendom.app";
-const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773436806";
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.queendom.app";
+const APP_STORE_URL =
+  "https://apps.apple.com/us/app/queendom-puzzle-game/id6773436806";
 ---
 
-<Base title="Download Queendom - A Royal Puzzle Game" description="Get Queendom on the iOS App Store and Google Play Store. Watch gameplay showcase, view screenshots, and join the closed beta.">
+<Base
+  title="Download Queendom - A Royal Puzzle Game"
+  description="Get Queendom on the iOS App Store and Google Play Store. Watch gameplay showcase, view screenshots, and join the closed beta."
+>
   <div class="download-page">
     <!-- App Header Section -->
     <div class="app-header">
-      <img src="/brand/Queendom_Icon_Filled.png" alt="Queendom Icon" class="app-icon-large animate-float" />
+      <img
+        src="/brand/Queendom_Icon_Filled.png"
+        alt="Queendom Icon"
+        class="app-icon-large animate-float"
+      />
       <h1 class="app-title">Queendom</h1>
       <p class="app-subtitle">A Royal Queen Placement Puzzle Game</p>
     </div>
@@ -17,19 +26,40 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
     <!-- Download Buttons & Closed Beta Notice -->
     <div class="download-cta-container">
       <div class="download-buttons">
-        <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
-          <img src="/store-badge/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="badge-img" />
+        <a
+          href={APP_STORE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="badge-link"
+        >
+          <img
+            src="/store-badge/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+            alt="Download on the App Store"
+            class="badge-img"
+          />
         </a>
 
-        <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
-          <img src="/store-badge/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" class="badge-img" />
+        <a
+          href={PLAY_STORE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="badge-link"
+        >
+          <img
+            src="/store-badge/GetItOnGooglePlay_Badge_Web_color_English.svg"
+            alt="Get it on Google Play"
+            class="badge-img"
+          />
         </a>
       </div>
 
       <div class="android-beta-box">
         <span class="beta-badge">Closed Beta</span>
         <p class="beta-notice">
-          The Android version is currently in closed testing (whitelisted emails only). If you would like to join the beta, please <a href="/contact/">contact us</a> to request an invitation.
+          The Android version is currently in closed testing (whitelisted emails
+          only). If you would like to join the beta, please <a href="/contact/"
+            >contact us</a
+          > to request an invitation.
         </p>
       </div>
     </div>
@@ -41,7 +71,14 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
         <div class="phone-mockup">
           <div class="phone-speaker"></div>
           <div class="screen">
-            <video src="/videos/short/Queendom-Play.mp4" autoplay loop muted playsinline preload="auto" class="showcase-video"></video>
+            <video
+              src="/videos/short/Queendom-Play.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+              class="showcase-video"></video>
           </div>
           <div class="phone-home-indicator"></div>
         </div>
@@ -59,28 +96,114 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
 
       <div class="tab-content active" id="iphone">
         <div class="screenshot-grid portrait-grid">
-          <div class="screenshot-item"><img src="/apple-app-store/iPhone/1.png" alt="iPhone Screen 1" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/apple-app-store/iPhone/2.png" alt="iPhone Screen 2" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/apple-app-store/iPhone/3.png" alt="iPhone Screen 3" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/apple-app-store/iPhone/4.png" alt="iPhone Screen 4" loading="lazy" /></div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPhone/iphone-6.7-01.png"
+              alt="iPhone Screen 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPhone/iphone-6.7-02.png"
+              alt="iPhone Screen 2"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPhone/iphone-6.7-03.png"
+              alt="iPhone Screen 3"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPhone/iphone-6.7-04.png"
+              alt="iPhone Screen 4"
+              loading="lazy"
+            />
+          </div>
+          <!-- <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPhone/iphone-6.7-05.png"
+              alt="iPhone Screen 5"
+              loading="lazy"
+            />
+          </div> -->
+          <!-- <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPhone/iphone-6.7-06.png"
+              alt="iPhone Screen 6"
+              loading="lazy"
+            />
+          </div> -->
         </div>
       </div>
 
       <div class="tab-content" id="ipad">
         <div class="screenshot-grid landscape-grid">
-          <div class="screenshot-item"><img src="/apple-app-store/iPad/Classic Mode.png" alt="iPad Classic Mode" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/apple-app-store/iPad/Chronicle Mode.png" alt="iPad Chronicle Mode" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/apple-app-store/iPad/Endless Mode.png" alt="iPad Endless Mode" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/apple-app-store/iPad/Game Stats.png" alt="iPad Game Stats" loading="lazy" /></div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPad/Classic Mode.png"
+              alt="iPad Classic Mode"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPad/Chronicle Mode.png"
+              alt="iPad Chronicle Mode"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPad/Endless Mode.png"
+              alt="iPad Endless Mode"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/apple-app-store/iPad/Game Stats.png"
+              alt="iPad Game Stats"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
 
       <div class="tab-content" id="android">
         <div class="screenshot-grid portrait-grid">
-          <div class="screenshot-item"><img src="/android-play-store/1.png" alt="Android Screen 1" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/android-play-store/2.png" alt="Android Screen 2" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/android-play-store/3.png" alt="Android Screen 3" loading="lazy" /></div>
-          <div class="screenshot-item"><img src="/android-play-store/4.png" alt="Android Screen 4" loading="lazy" /></div>
+          <div class="screenshot-item">
+            <img
+              src="/android-play-store/mobile-6.7-01.png"
+              alt="Android Screen 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/android-play-store/mobile-6.7-03.png"
+              alt="Android Screen 2"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/android-play-store/mobile-6.7-02.png"
+              alt="Android Screen 3"
+              loading="lazy"
+            />
+          </div>
+          <div class="screenshot-item">
+            <img
+              src="/android-play-store/mobile-6.7-04.png"
+              alt="Android Screen 4"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -123,7 +246,9 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
       width: 120px;
       height: 120px;
       border-radius: 28px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border);
+      box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.4),
+        0 0 0 1px var(--border);
       margin-bottom: 20px;
     }
     .app-title {
@@ -146,7 +271,8 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
       animation: float 4s ease-in-out infinite;
     }
     @keyframes float {
-      0%, 100% {
+      0%,
+      100% {
         transform: translateY(0);
       }
       50% {
@@ -248,7 +374,9 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
       background: #0f111a;
       border: 10px solid #2d2d44;
       border-radius: 40px;
-      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 24px 64px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
       position: relative;
       display: flex;
       flex-direction: column;
@@ -445,23 +573,23 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
 
   <script>
     // Tab switching functionality
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
 
-    tabButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const tabId = btn.getAttribute('data-tab');
-        
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tabId = btn.getAttribute("data-tab");
+
         // Update active class on buttons
-        tabButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
 
         // Update active class on contents
-        tabContents.forEach(content => {
+        tabContents.forEach((content) => {
           if (content.id === tabId) {
-            content.classList.add('active');
+            content.classList.add("active");
           } else {
-            content.classList.remove('active');
+            content.classList.remove("active");
           }
         });
       });
@@ -469,11 +597,11 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
 
     // Dynamic Counter Count-Up Script
     const animateCounters = () => {
-      const counters = document.querySelectorAll('.counter-number');
+      const counters = document.querySelectorAll(".counter-number");
       const duration = 1500; // 1.5 seconds animation
 
-      counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target') || '0', 10);
+      counters.forEach((counter) => {
+        const target = parseInt(counter.getAttribute("data-target") || "0", 10);
         const start = 0;
         let startTime: number | null = null;
 
@@ -481,18 +609,22 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
           if (!startTime) startTime = currentTime;
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          
+
           // Easing Out Quad function
           const easeProgress = progress * (2 - progress);
-          const currentValue = Math.floor(easeProgress * (target - start) + start);
-          
+          const currentValue = Math.floor(
+            easeProgress * (target - start) + start,
+          );
+
           // Format with + suffix for 3000
-          counter.textContent = currentValue.toLocaleString() + (target >= 1000 ? '+' : '');
+          counter.textContent =
+            currentValue.toLocaleString() + (target >= 1000 ? "+" : "");
 
           if (progress < 1) {
             requestAnimationFrame(updateCount);
           } else {
-            counter.textContent = target.toLocaleString() + (target >= 1000 ? '+' : '');
+            counter.textContent =
+              target.toLocaleString() + (target >= 1000 ? "+" : "");
           }
         };
 
@@ -501,16 +633,19 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
     };
 
     // IntersectionObserver to trigger animation when scrolled into view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounters();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
 
-    const countersSection = document.querySelector('.counters-section');
+    const countersSection = document.querySelector(".counters-section");
     if (countersSection) {
       observer.observe(countersSection);
     }
