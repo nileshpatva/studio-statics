@@ -1,0 +1,227 @@
+---
+import Base from "../layouts/Base.astro";
+
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.queendom.app";
+const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773436806";
+---
+
+<Base title="Connecting to App Store... - Queendom" description="Redirecting you to the appropriate app store for your device.">
+  <div class="redirect-container">
+    <div class="card">
+      <img
+        src="/brand/Queendom_Icon_Filled.png"
+        alt="Queendom Icon"
+        class="app-icon animate-float"
+      />
+      
+      <!-- Spinner -->
+      <div class="spinner-container">
+        <div class="loading-spinner"></div>
+      </div>
+
+      <h2 id="status-message" class="loading-text">Detecting your device...</h2>
+      <p class="sub-text">Please wait while we establish a secure connection to the store.</p>
+      
+      <noscript>
+        <div class="fallback-links">
+          <p class="noscript-text">JavaScript is disabled. Please select your store manually:</p>
+          <div class="download-buttons">
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
+              <img src="/store-badge/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="badge-img" />
+            </a>
+            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
+              <img src="/store-badge/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" class="badge-img" />
+            </a>
+          </div>
+        </div>
+      </noscript>
+
+      <div id="js-fallback-links" class="fallback-links hidden">
+        <p class="noscript-text">If you are not redirected automatically, click a link below:</p>
+        <div class="download-buttons">
+          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
+            <img src="/store-badge/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="badge-img" />
+          </a>
+          <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
+            <img src="/store-badge/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" class="badge-img" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .redirect-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50vh;
+      padding: 24px 0;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .app-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Floating animation */
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    /* Loading Spinner */
+    .spinner-container {
+      margin: 8px 0;
+    }
+    .loading-spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid rgba(74, 158, 255, 0.15);
+      border-radius: 50%;
+      border-top-color: var(--accent);
+      animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+    }
+    .sub-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    
+    /* Fallback download options */
+    .fallback-links {
+      width: 100%;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .noscript-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .download-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+    }
+    .badge-link {
+      display: inline-flex;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000000;
+      transition: all 0.2s ease;
+    }
+    .badge-link:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(74, 158, 255, 0.15);
+    }
+    .badge-img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script>
+    const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.queendom.app";
+    const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773436806";
+    const FALLBACK_URL = "/download-queendom/";
+
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    let targetUrl = FALLBACK_URL;
+    let counterKey = "";
+
+    // Device detection
+    const isIOS = /iPad|iPhone|iPod/.test(userAgent) || 
+      (navigator.maxTouchPoints > 1 && navigator.userAgent.includes('Macintosh'));
+    const isAndroid = /Android/i.test(userAgent);
+
+    if (isIOS) {
+      targetUrl = APP_STORE_URL;
+      counterKey = "queendom-ios";
+    } else if (isAndroid) {
+      targetUrl = PLAY_STORE_URL;
+      counterKey = "queendom-android";
+    }
+
+    // Update message status dynamically
+    const statusEl = document.getElementById("status-message");
+    if (statusEl) {
+      if (isIOS) statusEl.textContent = "Redirecting to Apple App Store...";
+      else if (isAndroid) statusEl.textContent = "Redirecting to Google Play Store...";
+      else statusEl.textContent = "Redirecting you to the download page...";
+    }
+
+    // Show manual fallback link area as backup after 3 seconds
+    setTimeout(() => {
+      const fallbackEl = document.getElementById("js-fallback-links");
+      if (fallbackEl) fallbackEl.classList.remove("hidden");
+    }, 3000);
+
+    // Perform redirection & metrics tracking
+    if (counterKey) {
+      const namespace = "cambay-studio";
+      const url = `https://api.counterapi.dev/v1/${namespace}/${counterKey}/up`;
+      
+      // Fire-and-forget fetch with keepalive to send metrics reliably during redirect
+      fetch(url, { keepalive: true, mode: "no-cors" })
+        .catch(err => console.error("Counter API error:", err))
+        .finally(() => {
+          window.location.replace(targetUrl);
+        });
+
+      // Redirect after 800ms fallback safety timer if CounterAPI stalls
+      setTimeout(() => {
+        window.location.replace(targetUrl);
+      }, 800);
+    } else {
+      // Direct routing for unrecognized platforms/desktop
+      window.location.replace(targetUrl);
+    }
+  </script>
+</Base>

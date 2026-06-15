@@ -5,13 +5,11 @@ const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.queend
 const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773436806";
 ---
 
-<Base title="Queendom - A Royal Puzzle Game" description="A grid-based puzzle game where you place queens in colored regions following three simple rules. Try 3000 handcrafted puzzles!">
+<Base title="Queendom - A Royal Puzzle Collection" description="Embark on a logic journey with four distinct, beautifully designed puzzle types: Queens, Realms, Routes, and Flow! Play 3,000+ handcrafted levels!">
   <div class="hero">
     <img src="/brand/queendom-1024x500.png" alt="Queendom - A Royal Puzzle Game" class="banner" />
     <p class="description">
-      A grid-based puzzle game where you place queens in colored regions following
-      three simple rules: one queen per region, no shared rows or columns, and no
-      diagonal adjacency.
+      Embark on a logic journey with four distinct, beautifully designed puzzle types under one crown: master the chessboard-inspired constraints of <strong>Queens</strong>, tile geometric grids in <strong>Realms</strong> (Shikaku), connect pipe circuits in <strong>Flow</strong>, or map continuous paths in <strong>Routes</strong> (Numberlink).
     </p>
 
     <!-- Store Links and CTA -->
@@ -24,11 +22,6 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
         <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" class="badge-link">
           <img src="/store-badge/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" class="badge-img" />
         </a>
-      </div>
-
-      <div class="android-beta-inline">
-        <span class="beta-badge-sm">Android Closed Beta</span>
-        <p class="beta-text-sm">For Android access requests, please <a href="/contact/">contact us</a>.</p>
       </div>
 
       <div class="showcase-cta">
@@ -44,7 +37,11 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
     <div class="counters-section">
       <div class="counter-card">
         <div class="counter-number" data-target="3000">0</div>
-        <div class="counter-label">Handcrafted Puzzles</div>
+        <div class="counter-label">Handcrafted Levels</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-number" data-target="4">0</div>
+        <div class="counter-label">Puzzle Games</div>
       </div>
       <div class="counter-card">
         <div class="counter-number" data-target="2">0</div>
@@ -60,26 +57,63 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
   <div class="screenshots">
     <h2>Screenshots</h2>
     <div class="screenshot-grid">
-      <img src="/android-play-store/1.png" alt="Queendom gameplay" loading="lazy" />
-      <img src="/android-play-store/2.png" alt="Queendom levels" loading="lazy" />
-      <img src="/android-play-store/3.png" alt="Queendom puzzle" loading="lazy" />
-      <img src="/android-play-store/4.png" alt="Queendom stats" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-01.png" alt="Queendom gameplay" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-02.png" alt="Queendom levels" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-03.png" alt="Queendom puzzle" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-04.png" alt="Queendom stats" loading="lazy" />
     </div>
   </div>
 
   <div class="features">
-    <div class="feature">
-      <h3>Two Game Modes</h3>
-      <p><strong>Classic</strong> — All regions visible. Plan your strategy.</p>
-      <p><strong>Chronicle</strong> — Unfold the story, region by region.</p>
+    <h2>Four Premium Logic Games</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/crown.png" alt="Queens Icon" class="game-icon" />
+        </div>
+        <h3>Queens</h3>
+        <p class="feature-tagline">Star Battle Placement</p>
+        <p>Place queens on a colored grid following three simple rules: one queen per colored region, no shared rows or columns, and no diagonal adjacency.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/layout.png" alt="Realms Icon" class="game-icon realms-icon" />
+        </div>
+        <h3>Realms</h3>
+        <p class="feature-tagline">Shikaku / Rectangles</p>
+        <p>Divide the grid into perfect squares and rectangles matching numbered areas. Grid cells must be fully tiled with zero overlaps.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/pipe_filled.png" alt="Flow Icon" class="game-icon flow-icon" />
+        </div>
+        <h3>Flow</h3>
+        <p class="feature-tagline">Connecting Pipes</p>
+        <p>Direct the water channels. Rotate plumber pipe connections to establish a complete flow from the water source to every lightbulb node.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/route.png" alt="Routes Icon" class="game-icon routes-icon" />
+        </div>
+        <h3>Routes</h3>
+        <p class="feature-tagline">Numberlink / Pathways</p>
+        <p>Draw sequential lines to connect identical numbers (1 &rarr; 2 &rarr; 3 &rarr; 4). Visit every single cell on the grid exactly once.</p>
+      </div>
     </div>
-    <div class="feature">
-      <h3>3000 Handcrafted Puzzles</h3>
-      <p>500 levels across Easy, Medium, and Hard for each mode.</p>
-    </div>
-    <div class="feature">
-      <h3>Endless Mode</h3>
-      <p>Random puzzles generated on the fly. Never run out of challenges.</p>
+  </div>
+
+  <div class="modes-section">
+    <h2>Experience the Royal Campaign</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Two Distinct Modes</h3>
+        <p><strong>Classic</strong> — Plan with precision: see the full layout and solve with standard rules.</p>
+        <p><strong>Chronicle</strong> — Discover dynamically: layouts are hidden in a fog of war, revealing active regions one-by-one as you place nodes and commit your moves.</p>
+      </div>
+      <div class="feature">
+        <h3>Endless Mode Generator</h3>
+        <p>Infinite generated logical grids for Queens, Realms, Flow, and Routes on the fly. Custom sized for all difficulty levels (Easy, Medium, Hard).</p>
+      </div>
     </div>
   </div>
 
@@ -202,13 +236,13 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
     }
     .counters-section {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       width: 100%;
     }
     @media (max-width: 600px) {
       .counters-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
       }
     }
@@ -267,6 +301,80 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
       display: grid;
       gap: 16px;
       margin: 40px 0;
+    }
+    .features h2 {
+      border: none;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 600px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      border-color: rgba(74, 158, 255, 0.3);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      height: 48px;
+    }
+    .game-icon {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+    .realms-icon {
+      filter: invert(65%) sepia(85%) saturate(1300%) hue-rotate(155deg) brightness(102%) contrast(102%); /* Teal/Cyan */
+    }
+    .flow-icon {
+      filter: invert(60%) sepia(90%) saturate(1200%) hue-rotate(180deg) brightness(102%) contrast(102%); /* Sky Blue */
+    }
+    .routes-icon {
+      filter: invert(65%) sepia(60%) saturate(1800%) hue-rotate(340deg) brightness(102%) contrast(102%); /* Coral/Orange */
+    }
+    .feature-tagline {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: -4px;
+      margin-bottom: 12px;
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    .feature-card p {
+      color: var(--text-muted);
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .modes-section {
+      margin-top: 56px;
+    }
+    .modes-section h2 {
+      border: none;
+      text-align: center;
+      margin-bottom: 24px;
     }
     .feature {
       background: var(--surface);

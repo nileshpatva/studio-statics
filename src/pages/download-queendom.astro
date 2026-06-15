@@ -8,8 +8,8 @@ const APP_STORE_URL =
 ---
 
 <Base
-  title="Download Queendom - A Royal Puzzle Game"
-  description="Get Queendom on the iOS App Store and Google Play Store. Watch gameplay showcase, view screenshots, and join the closed beta."
+  title="Download Queendom - A Royal Puzzle Collection"
+  description="Get Queendom on the iOS App Store and Google Play Store. Watch gameplay showcase, view screenshots, and master 4 distinct puzzle games (Queens, Realms, Flow, and Routes) under one crown."
 >
   <div class="download-page">
     <!-- App Header Section -->
@@ -20,7 +20,7 @@ const APP_STORE_URL =
         class="app-icon-large animate-float"
       />
       <h1 class="app-title">Queendom</h1>
-      <p class="app-subtitle">A Royal Queen Placement Puzzle Game</p>
+      <p class="app-subtitle">The Ultimate Premium Logic Puzzle Hub</p>
     </div>
 
     <!-- Download Buttons & Closed Beta Notice -->
@@ -51,16 +51,6 @@ const APP_STORE_URL =
             class="badge-img"
           />
         </a>
-      </div>
-
-      <div class="android-beta-box">
-        <span class="beta-badge">Closed Beta</span>
-        <p class="beta-notice">
-          The Android version is currently in closed testing (whitelisted emails
-          only). If you would like to join the beta, please <a href="/contact/"
-            >contact us</a
-          > to request an invitation.
-        </p>
       </div>
     </div>
 
@@ -145,29 +135,29 @@ const APP_STORE_URL =
         <div class="screenshot-grid landscape-grid">
           <div class="screenshot-item">
             <img
-              src="/apple-app-store/iPad/Classic Mode.png"
-              alt="iPad Classic Mode"
+              src="/apple-app-store/iPad/ipad-13-01.png"
+              alt="iPad Screen 1"
               loading="lazy"
             />
           </div>
           <div class="screenshot-item">
             <img
-              src="/apple-app-store/iPad/Chronicle Mode.png"
-              alt="iPad Chronicle Mode"
+              src="/apple-app-store/iPad/ipad-13-02.png"
+              alt="iPad Screen 2"
               loading="lazy"
             />
           </div>
           <div class="screenshot-item">
             <img
-              src="/apple-app-store/iPad/Endless Mode.png"
-              alt="iPad Endless Mode"
+              src="/apple-app-store/iPad/ipad-13-03.png"
+              alt="iPad Screen 3"
               loading="lazy"
             />
           </div>
           <div class="screenshot-item">
             <img
-              src="/apple-app-store/iPad/Game Stats.png"
-              alt="iPad Game Stats"
+              src="/apple-app-store/iPad/ipad-13-04.png"
+              alt="iPad Screen 4"
               loading="lazy"
             />
           </div>
@@ -214,7 +204,11 @@ const APP_STORE_URL =
       <div class="counters-section">
         <div class="counter-card">
           <div class="counter-number" data-target="3000">0</div>
-          <div class="counter-label">Handcrafted Puzzles</div>
+          <div class="counter-label">Handcrafted Levels</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-number" data-target="4">0</div>
+          <div class="counter-label">Puzzle Games</div>
         </div>
         <div class="counter-card">
           <div class="counter-number" data-target="2">0</div>
@@ -535,13 +529,13 @@ const APP_STORE_URL =
     }
     .counters-section {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       width: 100%;
     }
     @media (max-width: 600px) {
       .counters-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
       }
     }
