@@ -1,0 +1,161 @@
+---
+import Base from "../../layouts/Base.astro";
+import icons from "../../data/queendom/icons.json";
+import audio from "../../data/queendom/audio.json";
+import software from "../../data/queendom/software.json";
+---
+
+<Base
+  title="Credits & Attributions — Queendom"
+  description="Asset and software license attributions for the Queendom puzzle game"
+>
+  <h1>Credits & Attributions</h1>
+  <p>
+    We are incredibly grateful to the creators of the visual assets, audio
+    tracks, open-source software, and third-party resources that helped bring
+    Queendom to life.
+  </p>
+
+  <h2>Visual Assets & Icons</h2>
+  <p>
+    The icons used in the game's interface and menus were sourced from Flaticon. We attribute and thank the following designers:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Asset Group / Icon Pack</th>
+        <th>Designer / Author</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        icons.map((item) => (
+          <tr>
+            <td>{item.asset}</td>
+            <td>
+              <a
+                href={item.authorUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.author}
+              </a>
+            </td>
+            <td>
+              <a
+                href={item.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.source}
+              </a>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+
+  <h2>Audio & Soundtracks</h2>
+  <p>
+    All background scores, ambiance loops, and sound effects were sourced from the following creators:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Track Title / Sound Effect</th>
+        <th>Composer / Author</th>
+        <th>License / Platform</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        audio.map((item) => (
+          <tr>
+            <td>{item.title}</td>
+            <td>
+              {item.authorUrl && item.authorUrl !== "#" ? (
+                <a
+                  href={item.authorUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.author}
+                </a>
+              ) : (
+                item.author
+              )}
+            </td>
+            <td>
+              <a
+                href={item.licenseUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.license}
+              </a>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+
+  <h2>Software & Open Source</h2>
+  <p>
+    Queendom is built using modern open-source software libraries, including:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Library / Software</th>
+        <th>Purpose</th>
+        <th>Official Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        software.map((item) => (
+          <tr>
+            <td>
+              <strong>{item.name}</strong>
+            </td>
+            <td>{item.purpose}</td>
+            <td>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                Visit Website
+              </a>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+
+  <style is:global>
+    /* Premium high-contrast gold link styling for the Queendom theme */
+    main a {
+      color: #ffd700 !important;
+      text-decoration: none !important;
+      border-bottom: 1px dashed rgba(255, 215, 0, 0.45) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      font-weight: 500 !important;
+    }
+
+    main a:hover {
+      color: #ffffff !important;
+      border-bottom: 1px solid #ffffff !important;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.35) !important;
+    }
+
+    /* Subtle row hover styling */
+    tr {
+      transition: background-color 0.2s ease;
+    }
+
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02) !important;
+    }
+  </style>
+</Base>

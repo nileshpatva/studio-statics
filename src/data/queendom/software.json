@@ -1,0 +1,22 @@
+[
+  {
+    "name": "React Native",
+    "purpose": "Mobile App Framework",
+    "url": "https://reactnative.dev/"
+  },
+  {
+    "name": "Expo",
+    "purpose": "React Native Platform & SDK",
+    "url": "https://expo.dev/"
+  },
+  {
+    "name": "React Navigation",
+    "purpose": "App Navigation & Routing",
+    "url": "https://reactnavigation.org/"
+  },
+  {
+    "name": "React Native Reanimated",
+    "purpose": "Fluid Animations Engine",
+    "url": "https://docs.swmansion.com/react-native-reanimated/"
+  }
+]
