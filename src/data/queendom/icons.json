@@ -1,6 +1,6 @@
 [
   {
-    "asset": "Diamond, Pipes, Premium Crown, Sun",
+    "asset": "Diamond, Pipes, Premium Crown, Sun, Sudoku",
     "author": "Freepik",
     "authorUrl": "https://www.flaticon.com/authors/freepik",
     "source": "Flaticon",
@@ -31,6 +31,27 @@
     "asset": "Layout",
     "author": "MeaIcon",
     "authorUrl": "https://www.flaticon.com/authors/meaicon",
+    "source": "Flaticon",
+    "sourceUrl": "https://www.flaticon.com"
+  },
+  {
+    "asset": "Tetrominoes",
+    "author": "cah-nggunung",
+    "authorUrl": "https://www.flaticon.com/authors/cah-nggunung",
+    "source": "Flaticon",
+    "sourceUrl": "https://www.flaticon.com"
+  },
+  {
+    "asset": "Sudoku",
+    "author": "icongeek",
+    "authorUrl": "https://www.flaticon.com/authors/icongeek",
+    "source": "Flaticon",
+    "sourceUrl": "https://www.flaticon.com"
+  },
+  {
+    "asset": "Nonogram Q (Pixel Art Q)",
+    "author": "frelayasia",
+    "authorUrl": "https://www.flaticon.com/authors/frelayasia",
     "source": "Flaticon",
     "sourceUrl": "https://www.flaticon.com"
   }
