@@ -40,7 +40,7 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
         <div class="counter-label">Handcrafted Levels</div>
       </div>
       <div class="counter-card">
-        <div class="counter-number" data-target="4">0</div>
+        <div class="counter-number" data-target="8">0</div>
         <div class="counter-label">Puzzle Games</div>
       </div>
       <div class="counter-card">
@@ -61,11 +61,15 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
       <img src="/android-play-store/mobile-6.7-02.png" alt="Queendom levels" loading="lazy" />
       <img src="/android-play-store/mobile-6.7-03.png" alt="Queendom puzzle" loading="lazy" />
       <img src="/android-play-store/mobile-6.7-04.png" alt="Queendom stats" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-05.png" alt="Queendom nonogram" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-06.png" alt="Queendom equinox" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-07.png" alt="Queendom sudoku" loading="lazy" />
+      <img src="/android-play-store/mobile-6.7-08.png" alt="Queendom lits" loading="lazy" />
     </div>
   </div>
 
   <div class="features">
-    <h2>Four Premium Logic Games</h2>
+    <h2>Eight Premium Logic Games</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <div class="feature-icon">
@@ -99,6 +103,38 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
         <p class="feature-tagline">Numberlink / Pathways</p>
         <p>Draw sequential lines to connect identical numbers (1 &rarr; 2 &rarr; 3 &rarr; 4). Visit every single cell on the grid exactly once.</p>
       </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/mini_sudoku.png" alt="Sudoku Icon" class="game-icon sudoku-icon" />
+        </div>
+        <h3>Mini Sudoku</h3>
+        <p class="feature-tagline">6x6 Number Placement</p>
+        <p>Classic number-placement logic scaled down for quick, sharp challenges. Complete rows, columns, and blocks with unique digits.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/nonogram.png" alt="Nonogram Icon" class="game-icon nonogram-icon" />
+        </div>
+        <h3>Nonogram</h3>
+        <p class="feature-tagline">Premium Picross Art</p>
+        <p>Decode grid numbers to fill cells and reveal hidden pixel art pictures. A satisfying logic challenge with curated boards.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/tetris-color.png" alt="LITS Icon" class="game-icon" />
+        </div>
+        <h3>LITS</h3>
+        <p class="feature-tagline">Premium Tetromino Tiling</p>
+        <p>Place exactly one tetromino shape (L, I, T, or S) per region. All shapes must connect contiguously without forming 2x2 blocks.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/icons/equinox.png" alt="Equinox Icon" class="game-icon equinox-icon" />
+        </div>
+        <h3>Equinox</h3>
+        <p class="feature-tagline">Premium Celestial Balance</p>
+        <p>Balance the cosmic forces of Sun and Moon in adjacent cells. Place symbols carefully to satisfy region and adjacency restrictions.</p>
+      </div>
     </div>
   </div>
 
@@ -112,7 +148,7 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
       </div>
       <div class="feature">
         <h3>Endless Mode Generator</h3>
-        <p>Infinite generated logical grids for Queens, Realms, Flow, and Routes on the fly. Custom sized for all difficulty levels (Easy, Medium, Hard).</p>
+        <p>Infinite generated logical grids for all eight game modes on the fly. Custom sized for all difficulty levels (Easy, Medium, Hard).</p>
       </div>
     </div>
   </div>
@@ -348,6 +384,15 @@ const APP_STORE_URL = "https://apps.apple.com/us/app/queendom-puzzle-game/id6773
     }
     .routes-icon {
       filter: invert(65%) sepia(60%) saturate(1800%) hue-rotate(340deg) brightness(102%) contrast(102%); /* Coral/Orange */
+    }
+    .sudoku-icon {
+      filter: invert(80%) sepia(50%) saturate(1800%) hue-rotate(15deg) brightness(102%) contrast(102%); /* Warm Gold/Yellow */
+    }
+    .nonogram-icon {
+      filter: invert(55%) sepia(80%) saturate(1500%) hue-rotate(250deg) brightness(102%) contrast(102%); /* Premium Violet/Purple */
+    }
+    .equinox-icon {
+      filter: invert(55%) sepia(80%) saturate(2200%) hue-rotate(350deg) brightness(102%) contrast(102%); /* Celestial Sunset Orange */
     }
     .feature-tagline {
       font-size: 0.8rem;
